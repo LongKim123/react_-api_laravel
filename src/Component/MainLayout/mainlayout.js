@@ -1,0 +1,7 @@
+import React, { Component } from "react";
+class MainLayout extends Component{
+    render(){
+        return <div><p>Vào đk r nè</p></div>
+    };
+
+}
