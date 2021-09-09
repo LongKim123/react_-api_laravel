@@ -21,12 +21,13 @@ class Login extends Component{
      
       
     }
+    
   
       callAPI=()=>{
         try {
             userApi.LoginAPI(this.state.email,this.state.password).then(
               (res) =>{
-                 
+                console.log(res.headers);
                 setTimeout(() => {
                     this.setState({
                         handlepage:res.code
@@ -84,7 +85,7 @@ class Login extends Component{
                         </div>
                     </div>
                     <div className="footer">
-                      <button type="button" onClick={this.handleLogin} className="btn" >Login</button>
+                      <button type="button" onClick={this.handleLogin} className="btn-all" >Login</button>
                     </div>
   
                 </div>
@@ -97,7 +98,7 @@ class Login extends Component{
            
             return <Redirect to={
                 {
-                    pathname:'/layout',
+                    pathname:'/home',
                    
                 }
             }/>

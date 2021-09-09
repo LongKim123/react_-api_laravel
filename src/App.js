@@ -1,6 +1,6 @@
 
 import { Component } from 'react';
-import './Component/Login/style.scss';
+
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import './App.scss';
 import routes from './route';
@@ -26,6 +26,7 @@ class App extends Component{
         <Switch>
          
           {this.showContentMenus(routes)}
+          
         </Switch>
       </div>
       </Router>

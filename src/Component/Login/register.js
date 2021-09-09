@@ -88,7 +88,7 @@ class Register extends Component{
                       </div>
                   </div>
                   <div className="footer">
-                    <button type="button" className="btn" onClick={this.btnRegister} >Register</button>
+                    <button type="button" className="btn-all" onClick={this.btnRegister} >Register</button>
                   </div>
 
               </div>

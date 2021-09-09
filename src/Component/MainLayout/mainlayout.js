@@ -1,12 +1,29 @@
 import React, { Component } from "react";
-import {Prompt, Redirect,useHistory} from 'react-router-dom';
+import {Prompt, Redirect,useHistory,Link} from 'react-router-dom';
+import loginImg from "../../login.svg";
+import userApi from '../../api/UserApi';
+import Navbar from '../Partial/navbar';
 class MainLayout extends Component{
     constructor (props){
         super(props);
         this.state={isLogin:null}
     }
-    Logout=()=>{
+    componentDidMount(){
+        userApi.getAll().then(
+            (res) =>{
+              console.log(res.data); 
+            }
+        );
+           
         
+
+    }
+    Logout=()=>{
+        userApi.Logout().then(
+            (res) =>{
+              console.log(res.data); 
+            }
+        );
         localStorage.removeItem("user");
         this.setState({
             isLogin:1
@@ -28,8 +45,11 @@ class MainLayout extends Component{
             }/>
         }
         else{
-            return <div><p>Vào đk r nè</p>
-            <button className="btn" type="submit" onClick={this.Logout}>Đăng Xuất</button></div>
+            return <>
+            <Navbar Logout={this.Logout}/>
+            
+           
+            </>
         }
         
         

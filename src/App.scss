@@ -1,12 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
-
-.App {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-family: "Open Sans", sans-serif;
+}
+.App {
+  //text-align: center;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  
 
 }
 
@@ -20,7 +25,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-.btn{
+.btn-all{
   font-size: 21px;
   padding: 5px 20px;
   border: 0;
@@ -55,7 +60,7 @@
 .login{
   width: 27em;
   height: 40em;
-  
+  margin-left: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
